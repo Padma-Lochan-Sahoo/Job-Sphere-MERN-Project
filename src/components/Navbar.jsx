@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { useClerk , UserButton ,useUser} from '@clerk/clerk-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -9,10 +9,11 @@ const Navbar = () => {
     const {openSignIn} = useClerk()
     const {user} = useUser(); {/* when ever user is logedIn we get user data.*/}
 
+    const navigate = useNavigate()
   return (
     <div className='shadow py-4'>
         <div className='container px-4 2xl:px-20 mx-auto flex justify-between items-center'>
-            <img src={assets.logo} alt="" />
+            <img onClick={()=> navigate(`/`)} className='cursor-pointer' src={assets.logo} alt="" />
             {/* Here we are using Ternary operator to check user is logedIn or not. */}
             {
                 user
