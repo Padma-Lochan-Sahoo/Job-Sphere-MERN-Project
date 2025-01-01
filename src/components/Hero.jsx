@@ -30,7 +30,7 @@ const Hero = () => {
             <div className='flex items-center justify-between bg-white rounded text-gray-600 max-w-xl pl-4 mx-4 sm:mx-auto'>
                 <div className='flex items-center'>
                     <img className="h-4 sm:h-5" src={assets.search_icon} alt="" />
-                    <input type="text" name="" id="" placeholder='Search for Jobs'
+                    <input type="text" placeholder='Search for Jobs'
                     className='max-sm:text-xs p-2 rounded outline-none w-full'
                     ref={titleRef}
                     />
